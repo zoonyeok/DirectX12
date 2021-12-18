@@ -37,6 +37,6 @@ private:
 	uint32								_fenceValue = 0;
 	HANDLE								_fenceEvent = INVALID_HANDLE_VALUE;
 
-	shared_ptr<SwapChain>				_swapChain;
+	shared_ptr<SwapChain>		_swapChain;
 };
 

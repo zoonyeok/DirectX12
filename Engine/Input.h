@@ -46,9 +46,6 @@ private:
 
 private:
 	HWND _hwnd;
-	// 상태를 캐시해서 관리
 	vector<KEY_STATE> _states;
 };
-
-
 

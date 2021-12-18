@@ -21,4 +21,3 @@ private:
 	D3D12_STATIC_SAMPLER_DESC _samplerDesc;
 };
 
-

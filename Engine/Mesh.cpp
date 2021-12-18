@@ -3,10 +3,10 @@
 #include "Engine.h"
 #include "Material.h"
 
-void Mesh::Init(const vector<Vertex>& vec, const vector<uint32>& indexbuffer)
+void Mesh::Init(const vector<Vertex>& vertexBuffer, const vector<uint32>& indexBuffer)
 {
-	CreateVertexBuffer(vec);
-	CreateIndexBuffer(indexbuffer);
+	CreateVertexBuffer(vertexBuffer);
+	CreateIndexBuffer(indexBuffer);
 }
 
 void Mesh::Render()
@@ -19,14 +19,13 @@ void Mesh::Render()
 	// 1) Buffer에다가 데이터 세팅
 	// 2) TableDescHeap에다가 CBV 전달
 	// 3) 모두 세팅이 끝났으면 TableDescHeap 커밋
-	
+		
 	CONST_BUFFER(CONSTANT_BUFFER_TYPE::TRANSFORM)->PushData(&_transform, sizeof(_transform));
 
 	_mat->Update();
 
 	GEngine->GetTableDescHeap()->CommitTable();
 
-	//CMD_LIST->DrawInstanced(_vertexCount, 1, 0, 0);
 	CMD_LIST->DrawIndexedInstanced(_indexCount, 1, 0, 0, 0);
 }
 
@@ -85,4 +84,3 @@ void Mesh::CreateIndexBuffer(const vector<uint32>& buffer)
 	_indexBufferView.Format = DXGI_FORMAT_R32_UINT;
 	_indexBufferView.SizeInBytes = bufferSize;
 }
-

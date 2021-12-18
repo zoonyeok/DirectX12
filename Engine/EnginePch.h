@@ -1,6 +1,6 @@
 #pragma once
 
-//std::byte 사용하지 않음
+// std::byte 사용하지 않음
 #define _HAS_STD_BYTE 0
 
 // 각종 include
@@ -45,18 +45,18 @@ using namespace Microsoft::WRL;
 #endif
 
 // 각종 typedef
-using int8 = __int8;
-using int16 = __int16;
-using int32 = __int32;
-using int64 = __int64;
-using uint8 = unsigned __int8;
-using uint16 = unsigned __int16;
-using uint32 = unsigned __int32;
-using uint64 = unsigned __int64;
-using Vec2 = XMFLOAT2;
-using Vec3 = XMFLOAT3;
-using Vec4 = XMFLOAT4;
-using Matrix = XMMATRIX;
+using int8		= __int8;
+using int16		= __int16;
+using int32		= __int32;
+using int64		= __int64;
+using uint8		= unsigned __int8;
+using uint16	= unsigned __int16;
+using uint32	= unsigned __int32;
+using uint64	= unsigned __int64;
+using Vec2		= XMFLOAT2;
+using Vec3		= XMFLOAT3;
+using Vec4		= XMFLOAT4;
+using Matrix	= XMMATRIX;
 
 enum class CBV_REGISTER : uint8
 {
@@ -118,5 +118,4 @@ struct Transform
 
 #define CONST_BUFFER(type)	GEngine->GetConstantBuffer(type)
 
-//전방선언
 extern unique_ptr<class Engine> GEngine;

@@ -19,15 +19,14 @@ void Input::Update()
 		return;
 	}
 
-	BYTE asciikeys[KEY_TYPE_COUNT] = {};
-	if (::GetKeyboardState(asciikeys) == false)
+	BYTE asciiKeys[KEY_TYPE_COUNT] = {};
+	if (::GetKeyboardState(asciiKeys) == false)
 		return;
 
-	// 매 프레임마다 고정된 값을 가지게 해주기 위해서
 	for (uint32 key = 0; key < KEY_TYPE_COUNT; key++)
 	{
 		// 키가 눌려 있으면 true
-		if (asciikeys[key] & 0x80)
+		if (asciiKeys[key] & 0x80)
 		{
 			KEY_STATE& state = _states[key];
 

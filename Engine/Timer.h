@@ -8,7 +8,6 @@ public:
 	void Update();
 
 	uint32 GetFps() { return _fps; }
-	// 이전 프레임에서 경과된 시간
 	float GetDeltaTime() { return _deltaTime; }
 
 private:
@@ -21,5 +20,4 @@ private:
 	float	_frameTime = 0.f;
 	uint32	_fps = 0;
 };
-
 

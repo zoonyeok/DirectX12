@@ -17,9 +17,12 @@ ConstantBuffer::~ConstantBuffer()
 	}
 }
 
+
+
 void ConstantBuffer::Init(CBV_REGISTER reg, uint32 size, uint32 count)
 {
 	_reg = reg;
+
 	// 상수 버퍼는 256 바이트 배수로 만들어야 한다
 	// 0 256 512 768
 	_elementSize = (size + 255) & ~255;
@@ -79,7 +82,7 @@ void ConstantBuffer::Clear()
 void ConstantBuffer::PushData(void* buffer, uint32 size)
 {
 	assert(_currentIndex < _elementCount);
-	assert(_elementSize == ((size+255) & ~255));
+	assert(_elementSize == ((size + 255) & ~255));
 
 	::memcpy(&_mappedBuffer[_currentIndex * _elementSize], buffer, size);
 

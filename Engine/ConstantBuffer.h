@@ -18,7 +18,7 @@ public:
 	ConstantBuffer();
 	~ConstantBuffer();
 
-	void Init(CBV_REGISTER reg,uint32 size, uint32 count);
+	void Init(CBV_REGISTER reg, uint32 size, uint32 count);
 
 	void Clear();
 	void PushData(void* buffer, uint32 size);
@@ -32,7 +32,7 @@ private:
 
 private:
 	ComPtr<ID3D12Resource>	_cbvBuffer;
-	BYTE* _mappedBuffer = nullptr;
+	BYTE*					_mappedBuffer = nullptr;
 	uint32					_elementSize = 0;
 	uint32					_elementCount = 0;
 
