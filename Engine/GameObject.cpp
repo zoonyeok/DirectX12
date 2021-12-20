@@ -83,7 +83,7 @@ shared_ptr<Transform> GameObject::GetTransform()
 
 void GameObject::AddComponent(shared_ptr<Component> component)
 {
-	component->SetGameObject(shared_from_this()); // 자기 자신의 sharedPtr을 넘겨줌
+	component->SetGameObject(shared_from_this());
 
 	uint8 index = static_cast<uint8>(component->GetType());
 	if (index < FIXED_COMPONENT_COUNT)

@@ -5,7 +5,7 @@ enum class COMPONENT_TYPE : uint8
 	TRANSFORM,
 	MESH_RENDERER,
 	// ...
-	MONO_BEHAVIOUR, //마지막에 등장해야 함
+	MONO_BEHAVIOUR,
 	END,
 };
 
@@ -42,6 +42,6 @@ private:
 
 protected:
 	COMPONENT_TYPE _type;
-	weak_ptr<GameObject> _gameObject; // 서로 알고 있어야 하므로 하나는 weak
+	weak_ptr<GameObject> _gameObject;
 };
 
