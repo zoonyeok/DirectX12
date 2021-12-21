@@ -38,5 +38,6 @@
 Client/x64
 Engine/x64
 
-# 
+#
 Library/Lib/DirectXTex/*.lib
+Output/*.lib
