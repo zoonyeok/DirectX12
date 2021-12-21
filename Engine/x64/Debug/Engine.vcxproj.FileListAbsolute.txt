@@ -1,3 +1,0 @@
-C:\Users\junhy\source\CPP_DirectX\DirectXGame\x64\Debug\Engine.pdb
-C:\Users\junhy\source\CPP_DirectX\DirectXGame\Output\Engine.pdb
-C:\Users\junhy\source\CPP_DirectX\DirectXGame\Engine\x64\Debug\Engine.pdb

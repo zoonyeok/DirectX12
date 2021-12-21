@@ -92,6 +92,10 @@ void GameObject::AddComponent(shared_ptr<Component> component)
 	}
 	else
 	{
+		// dynamic_pointer_cast
+		// rtti on 
+		// Run - Time 형식 정보 사용 속성을 수정해야함
+		// 호환되지 않는 자식형으로 캐스팅하려고 하면  NULL을 반환
 		_scripts.push_back(dynamic_pointer_cast<MonoBehaviour>(component));
 	}
 }

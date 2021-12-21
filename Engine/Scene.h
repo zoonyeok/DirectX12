@@ -16,5 +16,10 @@ public:
 
 private:
 	vector<shared_ptr<GameObject>> _gameObjects;
+	// Unity 최적화위해 Layer
+	// [ 0 ] Wall
+	// [ 1 ] Monster
+	//  ...
+	// [ 31 ] 
 };
 
