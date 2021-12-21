@@ -37,3 +37,6 @@
 # Debug folder
 Client/x64
 Engine/x64
+
+# 
+Library/Lib/DirectXTex/*.lib
