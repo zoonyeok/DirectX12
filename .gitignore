@@ -33,3 +33,7 @@
 
 # Visual Studio cache/options directory
 .vs/
+
+# Debug folder
+Client/x64
+Engine/x64
